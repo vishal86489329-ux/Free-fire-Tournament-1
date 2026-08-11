@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Tournament Registration</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#111827,#1e3a8a);
+    color:white;
+}
+.container{
+    max-width:600px;
+    margin:30px auto;
+    padding:20px;
+}
+.card{
+    background:white;
+    color:#111827;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+h1{
+    text-align:center;
+    color:#dc2626;
+    margin-bottom:5px;
+}
+.subtitle{
+    text-align:center;
+    color:#555;
+    margin-bottom:25px;
+}
+.notice{
+    background:#fee2e2;
+    border-left:5px solid #dc2626;
+    padding:12px;
+    margin-bottom:20px;
+    border-radius:8px;
+    font-size:14px;
+}
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:6px;
+}
+input,select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+button{
+    width:100%;
+    margin-top:22px;
+    padding:15px;
+    border:0;
+    border-radius:10px;
+    background:#dc2626;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+button:hover{background:#b91c1c}
+.success{
+    display:none;
+    margin-top:20px;
+    padding:15px;
+    background:#dcfce7;
+    color:#166534;
+    border-radius:10px;
+    text-align:center;
+}
+.footer{
+    text-align:center;
+    margin-top:20px;
+    font-size:13px;
+    opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<h1>🔥 FREE FIRE TOURNAMENT 🔥</h1>
+<p class="subtitle">Tournament Registration Form</p>
+
+<div class="notice">
+<b>Entry Fee:</b><br>
+Team (4 Players): ₹200<br>
+Solo: ₹50 per player
+<br><br>
+⚠️ Hacks are strictly prohibited. If cheating is detected, the player/team may be disqualified.
+</div>
+
+<form id="registrationForm">
+
+<label>Registration Type</label>
+<select id="type" required>
+<option value="">Select Type</option>
+<option value="Team">Team - ₹200</option>
+<option value="Solo">Solo - ₹50</option>
+</select>
+
+<label>Captain / Player Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+
+<label>Free Fire UID</label>
+<input type="text" id="uid" placeholder="Enter Free Fire UID" required>
+
+<label>WhatsApp Number</label>
+<input type="tel" id="phone" placeholder="Enter WhatsApp number" required>
+
+<label>Team Name</label>
+<input type="text" id="team" placeholder="Enter team name">
+
+<label>Player 2 Name</label>
+<input type="text" id="p2" placeholder="For Team registration">
+
+<label>Player 3 Name</label>
+<input type="text" id="p3" placeholder="For Team registration">
+
+<label>Player 4 Name</label>
+<input type="text" id="p4" placeholder="For Team registration">
+
+<label>Payment Status</label>
+<select id="payment" required>
+<option value="">Select Payment Status</option>
+<option value="Paid">Paid</option>
+<option value="Not Paid">Not Paid</option>
+</select>
+
+<label>Transaction ID</label>
+<input type="text" id="transaction" placeholder="Enter transaction ID">
+
+<button type="submit">SUBMIT REGISTRATION</button>
+
+</form>
+
+<div class="success" id="success">
+✅ Registration submitted successfully!<br>
+Please save your registration details.
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Free Fire Tournament
+</div>
+
+</div>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const registration = {
+    type: document.getElementById("type").value,
+    name: document.getElementById("name").value,
+    uid: document.getElementById("uid").value,
+    phone: document.getElementById("phone").value,
+    team: document.getElementById("team").value,
+    player2: document.getElementById("p2").value,
+    player3: document.getElementById("p3").value,
+    player4: document.getElementById("p4").value,
+    payment: document.getElementById("payment").value,
+    transaction: document.getElementById("transaction").value,
+    date: new Date().toLocaleString()
+};
+
+let registrations =
+JSON.parse(localStorage.getItem("tournamentRegistrations")) || [];
+
+registrations.push(registration);
+
+localStorage.setItem(
+    "tournamentRegistrations",
+    JSON.stringify(registrations)
+);
+
+document.getElementById("success").style.display="block";
+
+this.reset();
+
+window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior:"smooth"
+});
+
+});
+</script>
+
+</body>
+</html>
