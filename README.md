@@ -345,10 +345,10 @@ placeholder="Enter your Free Fire UID"
 <img src="qr-code.png" alt="Tournament Payment QR Code">
 
 <div class="upi">
-UPI ID: <b id="upiId">YOUR-UPI-ID@upi</b>
+UPI ID: <b id="upiId">8894132310@ptyes</b>
 </div>
 
-<p class="small">
+<p class="small"> 
 Payment karne ke baad UTR / Transaction ID zaroor enter karein.
 </p>
 
