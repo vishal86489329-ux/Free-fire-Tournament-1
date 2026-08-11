@@ -345,7 +345,7 @@ placeholder="Enter your Free Fire UID"
 <img src="qr-code.png" alt="Tournament Payment QR Code">
 
 <div class="qr">
-UPI ID: <b id="upiId">8894132310@ptyes</b>
+UPI ID: <b id="8894132310@ptyes"></b>
 </div>
 
 <p class="small"> 
