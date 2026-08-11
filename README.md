@@ -1,8 +1,4 @@
-# Free-fire-Tournament-1from pathlib import Path
-import zipfile
-
-root = Path("/mnt/data/free_fire_tournament_html")
-root.mkdir(exist_ok=True)
+# Free-fire-Tournament-1
 
 html = r'''<!doctype html>
 <html lang="hi">
