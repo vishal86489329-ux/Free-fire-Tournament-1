@@ -334,20 +334,22 @@ placeholder="Enter your Free Fire UID"
 
 <div class="payment">
 
-<h3>💳 Payment</h3>
+<div class="payment">
+  <h2>💳 Payment</h2>
+  <p>Payment karne ke liye neeche button par click karein.</p>
 
-<p>Registration Fee:</p>
+  <p><strong>UPI ID:</strong> 8894132310@ptyes</p>
 
-<h2 id="feeAmount">₹200</h2>
+  <a href="upi://pay?pa=8894132310@ptyes&pn=Free%20Fire%20Tournament&cu=INR"
+     style="display:inline-block;padding:12px 20px;
+            background:#00c853;color:white;
+            text-decoration:none;border-radius:8px;
+            font-weight:bold;">
+    💰 Pay Now
+  </a>
 
-<p>Scan the QR code below to pay.</p>
-
-<img src="8894132310@ptyes" alt="8894132310@ptyes">
-
-<div class="8894132310@ptyes">
-UPI ID: <b id="8894132310@ptyes"></b>
+  <p>Payment ke baad screenshot upload karein.</p>
 </div>
-
 <p class="small"> 
 Payment karne ke baad UTR / Transaction ID zaroor enter karein.
 </p>
